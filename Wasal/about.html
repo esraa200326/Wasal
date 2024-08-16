@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Site Metas -->
+    <title>Wasel</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/Logo-BLUE.PNG" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="host_version"> 
+
+ 	<!-- Modal -->
+     <div class="modal fade dir" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content">
+              <div class="modal-header tit-up">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title">تسجيل دخول العميل</h4>
+              </div>
+              <div class="modal-body customer-box">
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-tabs">
+                      <li><a class="active" href="#Login" data-toggle="tab">تسجيل دخول </a></li>
+                      <li><a href="#Registration" data-toggle="tab">تسجيل لاول مره</a></li>
+                  </ul>
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                      <div class="tab-pane active" id="Login">
+                          <form role="form" class="form-horizontal">
+                              <div class="form-group">
+                                  <div class="col-sm-12">
+                                      <input class="form-control" id="email1" placeholder="الاسم" type="text">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <div class="col-sm-12">
+                                      <input class="form-control" id="exampleInputPassword1" placeholder="الايميل" type="email">
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-sm-10">
+                                      <button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+                                          ارسل
+                                      </button>
+                                      <a class="for-pwd" href="javascript:;">نسيت كلمة المرور؟</a>
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                      <div class="tab-pane" id="Registration">
+                          <form role="form" class="form-horizontal">
+                              <div class="form-group">
+                                  <div class="col-sm-12">
+                                      <input class="form-control" placeholder="الاسم" type="text">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <div class="col-sm-12">
+                                      <input class="form-control" id="email" placeholder="الايميل" type="email">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <div class="col-sm-12">
+                                      <input class="form-control" id="mobile" placeholder="رقم الهاتف" type="email">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <div class="col-sm-12">
+                                      <input class="form-control" id="password" placeholder="باسورد" type="password">
+                                  </div>
+                              </div>
+                              <div class="row">							
+                                  <div class="col-sm-10">
+                                      <button type="button" class="btn btn-light btn-radius btn-brd grd1">
+                                          حفظ &amp; اكمال
+                                      </button>
+                                      <button type="button" class="btn btn-light btn-radius btn-brd grd1">
+                                          الغاء</button>
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+
+    <!-- LOADER -->
+	<div id="preloader">
+		<div class="loader-container">
+			<div class="progress-br float shadow">
+				<div class="progress__item"></div>
+			</div>
+		</div>
+	</div>
+	<!-- END LOADER -->	
+	
+	<!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+
+				<div class="collapse navbar-collapse" id="navbars-host">
+					
+					<ul class="nav navbar-nav navbar-right">
+                        <li><a class="hover-btn-new log blue"href="#" data-toggle="modal" data-target="#login" ><span>تسجيل الدخول</span></a></li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+						<li class="nav-item"><a class="nav-link" href="pricing.html">الاسعار</a></li>
+						
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">الكورسات </a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="course-grid-2.html">Course Grid 2 </a>
+								<a class="dropdown-item" href="course-grid-3.html">Course Grid 3 </a>
+								<a class="dropdown-item" href="course-grid-4.html">Course Grid 4 </a>
+							</div>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="blog.html">خدماتنا </a></li>
+						<li class="nav-item active"><a class="nav-link" href="about.html">من نحن</a></li>
+                        <li class="nav-item "><a class="nav-link" href="index.html">الرئيسية</a></li>
+					</ul>
+
+				</div>
+				<a class="navbar-brand" href="index.html">
+					<img src="images/Logo-BLUE.PNG" alt="" width="100px" height="100px" />
+				</a>
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+				</button>
+			</div>
+		</nav>
+	</header>
+	<!-- End header -->
+	
+	<div class="all-title-box">
+		<div class="container text-center">
+			<h1>من نحن</h1>
+		</div>
+	</div>
+	
+    <div id="overviews" class="section wb dir">
+        <div class="container">
+        
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h2>الدوره الالماسية</h2>
+                        <h6 class="black">️نعلمك من الصفر حتى الاتقان في جميع أنواع أسواق المال وكيفية التداول . التعرف على المنصات توقيت الذهبي للأسواق تحديد الأهداف والوقف ونقاط الدخول الرافعة المالية والهامش وحساب النقاط المفكرة الإقتصادية وكيفية قرائتها. إدارة المخاطر . ثم الإنتقال الى رحلتك التالية:~ التحليل الفني الشموع اليابانية وأنواع الرسم البياني الدعم والمقاومة والنماذج الكلاسيكة القنوات وأنواع الإتجاهات نظرية داو ونظرية وايكوف المؤشرات الفنية وإستخداماتها الكسور والإختراقات الفيبوناتشي التصحيحي والإمتدادي مدخل لموجات إليوت التصحيحة والدافعة.</h6>                        
+                        <p>    <i class="fa-regular fa-circle-check" style="color: #000000;"></i>   ️️اشتراك اضافي في قروبات التوصيات و الأخبار     </p>
+                        <p>    <i class="fa-regular fa-circle-check" style="color: #000000;"></i>  ️اشتراك اضافي في احد خطط الربح التراكمي من اختيارك    </p>
+                        <p>    <i class="fa-regular fa-circle-check" style="color: #000000;"></i>   ️️️متابعة و اشراف من المدرب خطوة بخطوة          </p> 
+                        <p>    <i class="fa-regular fa-circle-check" style="color: #000000;"></i>   ️️️بثوث مباشرة بين كل فترة و فترة للإجابة عن تساؤلاتك في حال الحاجه     </p>
+                        <p>    <i class="fa-regular fa-circle-check" style="color: #000000;"></i>   ️️️️قروب للمناقشه خاص لطرح جميع مواضيع التداول   </p> 
+
+
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="images/10k-to-50k.zip-3.png" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+			</div>
+			<div class="row align-items-center">
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="images/10k-to-50k.zip-2.png" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h2>الدوره الذهبية</h2>
+                        <h6 class="black">     ️نعلمك من الصفر حتى الاتقان في جميع أنواع أسواق المال وكيفية التداول . التعرف على المنصات توقيت الذهبي للأسواق تحديد الأهداف والوقف ونقاط الدخول الرافعة المالية والهامش وحساب النقاط المفكرة الإقتصادية وكيفية قرائتها. إدارة المخاطر . ثم الإنتقال الى رحلتك التالية:~ التحليل الفني الشموع اليابانية وأنواع الرسم البياني الدعم والمقاومة والنماذج الكلاسيكة القنوات وأنواع الإتجاهات نظرية داو ونظرية وايكوف المؤشرات الفنية وإستخداماتها الكسور والإختراقات الفيبوناتشي التصحيحي والإمتدادي مدخل لموجات إليوت التصحيحة والدافعة.   </h6>                        
+                        <p>    <i class="fa-regular fa-circle-check" style="color: #000000;"></i>   ️️️اشتراك اضافي في قروبات التوصيات و الأخبار  </p>
+                        <p>    <i class="fa-regular fa-circle-check" style="color: #000000;"></i>  ️️قروب للمناقشه خاص لطرح جميع مواضيع التداول                        </p>
+
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+            </div>
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="message-box">
+                            <h2>الدوره الالماسية</h2>
+                            <h6 class="black">   قناة WT CASH GOLD: تتضمن صفقات يوميه مع نقاط بين 200-500 نقطة ونسبة أرباح عالية. يُفضل رأس المال 1000$ وما فوق. WT CASH: مخصصة للمبتدئين مع صفقات يوميًا ونقاط بين 100-120 نقطة ونسبة أرباح مناسبة لتحقيق أهداف. رأس المال المناسب 300$ مع إدارة مخاطر مكثفة. ايضاً قروب مخصص فقط للأخبار الاقتصادية بالاضافه الى طريقه مبسطه لادراه مخاطر حسابك بالشكل الصحيح والاستفاده من التوصيات بافضل شكل والربح منها   </h6>
+                            <h4>ملحوظة : </h4>
+  <p>لسنا مسؤولين عن خسارة رؤوس اموالكم اذا لم يتم اتباع ادارة مخاطر على الصفقات من قبلكم</p>
+    
+                        </div><!-- end messagebox -->
+                    </div><!-- end col -->
+                    
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="post-media wow fadeIn">
+                            <img src="images/10k-to-50k.zip-3.png" alt="" class="img-fluid img-rounded">
+                        </div><!-- end media -->
+                    </div><!-- end col -->
+                                </div>
+
+                                <div class="row align-items-center">
+                                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                        <div class="post-media wow fadeIn">
+                                            <img src="images/10k-to-50k.zip-1.png" alt="" class="img-fluid img-rounded">
+                                        </div><!-- end media -->
+                                    </div><!-- end col -->
+                                    
+                                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                        <div class="message-box">
+                                            <h2>الدوره السماوية</h2>
+                                            <p>خطط تراكميه تعني أنك مسؤول شخصياً عن حسابك الخاص بالتداول ولك حرية التصرف فيه</p>
+                                            <h4>مميزات الخطه:</h4>    
+                                            <p>  <i class="fa-regular fa-circle-check" style="color: #000000;"></i>   ️توضيح الهدف المطلوب منك من قِبَل الخبير بناءً على خطه مدروسه </p>
+                                            <p>  <i class="fa-regular fa-circle-check" style="color: #000000;"></i>    ️ادارة رأس المال والمخاطر من قِبَل الخبراء </p>
+                                            <p>  <i class="fa-regular fa-circle-check" style="color: #000000;"></i>   ️بعد الشراء سيظهر لك الملف في حال لم يظهر الرجاء التواصل مع حساب المانجر لتقوم باضافتك في الخدمه ️</p>
+                                        </div><!-- end messagebox -->
+                                    </div><!-- end col -->
+                     
+                            
+                   </div><!-- end messagebox -->
+                    </div><!-- end col -->
+                       
+                  
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+    </div>
+
+
+    <footer class="footer">
+        <img src="images/Wasel-blue--removebg-preview .png" alt="" width="300px" height="200px" style="align-items: center;" />
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>من نحن</h3>
+                        </div>
+                        <p>					اهلا بمستثمر المستقبل مع وصل للتعليم عن بُعد
+                            لكل من عنده الرغبه في تنويع مصادر دخله والإستثمار سواء عندك خبره او عدم وجود الخبره راح نعطيك خطه واضحه ومتكامله تمكنك تبدأ بالاستثمار بكل استقلاليه وسهوله
+                            
+                            </p>   
+						<div class="footer-right">
+							<ul class="footer-links-soi">
+								<li><a href="https://www.instagram.com/thewtofficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa-brands fa-instagram"></i></a></li>
+								<li><a href="https://x.com/thewtofficial?s=21&amp%3Bt=6hasq12C80rqErVnEKEjjw"><i class="fa-brands fa-twitter"></i></a></li>
+								<li><a href="https://t.me/thewtofficial7"><i class="fa-brands fa-telegram"></i></a></li>
+							</ul><!-- end links -->
+						</div>	
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+				<div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>الروابط الهامة</h3>
+                        </div>
+                        <ul class="footer-links">
+                            <li><a href="blog.html">خدماتنا</a></li>
+                            <li><a href="pricing.html">الاسعار</a></li>
+							<li><a href="privacy.html">القوانين و الخصوصية </a></li>
+							<li><a href="contact.html">تواصل معنا</a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>معلومات التواصل</h3>
+                        </div>
+
+                        <ul class="footer-links">
+                            <li><a href="mailto:info@thewtofficial.trade">info@thewtofficial.trade</a></li>
+                            <li><a href="https://t.me/WASELTRADING">الدعم :  WASEL TRADING </a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+
+</body>
+</html>

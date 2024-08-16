@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Site Metas -->
+    <title>Wasel</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/Logo-BLUE.PNG" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="host_version"> 
+
+ 	<!-- Modal -->
+     <div class="modal fade dir" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content">
+              <div class="modal-header tit-up">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title">تسجيل دخول العميل</h4>
+              </div>
+              <div class="modal-body customer-box">
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-tabs">
+                      <li><a class="active" href="#Login" data-toggle="tab">تسجيل دخول </a></li>
+                      <li><a href="#Registration" data-toggle="tab">تسجيل لاول مره</a></li>
+                  </ul>
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                      <div class="tab-pane active" id="Login">
+                          <form role="form" class="form-horizontal">
+                              <div class="form-group">
+                                  <div class="col-sm-12">
+                                      <input class="form-control" id="email1" placeholder="الاسم" type="text">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <div class="col-sm-12">
+                                      <input class="form-control" id="exampleInputPassword1" placeholder="الايميل" type="email">
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-sm-10">
+                                      <button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+                                          ارسل
+                                      </button>
+                                      <a class="for-pwd" href="javascript:;">نسيت كلمة المرور؟</a>
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                      <div class="tab-pane" id="Registration">
+                          <form role="form" class="form-horizontal">
+                              <div class="form-group">
+                                  <div class="col-sm-12">
+                                      <input class="form-control" placeholder="الاسم" type="text">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <div class="col-sm-12">
+                                      <input class="form-control" id="email" placeholder="الايميل" type="email">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <div class="col-sm-12">
+                                      <input class="form-control" id="mobile" placeholder="رقم الهاتف" type="email">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <div class="col-sm-12">
+                                      <input class="form-control" id="password" placeholder="باسورد" type="password">
+                                  </div>
+                              </div>
+                              <div class="row">							
+                                  <div class="col-sm-10">
+                                      <button type="button" class="btn btn-light btn-radius btn-brd grd1">
+                                          حفظ &amp; اكمال
+                                      </button>
+                                      <button type="button" class="btn btn-light btn-radius btn-brd grd1">
+                                          الغاء</button>
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+
+    <!-- LOADER -->
+	<div id="preloader">
+		<div class="loader-container">
+			<div class="progress-br float shadow">
+				<div class="progress__item"></div>
+			</div>
+		</div>
+	</div>
+	<!-- END LOADER -->	
+	
+	<!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+
+				<div class="collapse navbar-collapse" id="navbars-host">
+					
+					<ul class="nav navbar-nav navbar-right">
+                        <li><a class="hover-btn-new log blue"href="#" data-toggle="modal" data-target="#login" ><span>تسجيل الدخول</span></a></li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+						<li class="nav-item"><a class="nav-link" href="pricing.html">الاسعار</a></li>
+						
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">الكورسات </a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="course-grid-2.html">Course Grid 2 </a>
+								<a class="dropdown-item" href="course-grid-3.html">Course Grid 3 </a>
+								<a class="dropdown-item" href="course-grid-4.html">Course Grid 4 </a>
+							</div>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="blog.html">خدماتنا </a></li>
+						<li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="index.html">الرئيسية</a></li>
+					</ul>
+
+				</div>
+				<a class="navbar-brand" href="index.html">
+					<img src="images/Logo-BLUE.PNG" alt="" width="100px" height="100px" />
+				</a>
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+				</button>
+			</div>
+		</nav>
+	</header>
+	<!-- End header -->
+	
+	<div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel" data-pause="hover" data-interval="false" >
+		<!-- Indicators -->
+
+		<div class="carousel-inner" role="listbox">
+			<div class="carousel-item active">
+				<div id="home" class="first-section">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-right">
+									<div class="big-tagline">
+										<h2><strong>اهلا بمستثمر المستقبل مع
+                                        </strong> وصل للتعليم عن بُعد </h2>
+										<p class="lead">لكل من عنده الرغبه في تنويع مصادر دخله والإستثمار سواء عندك خبره او عدم وجود الخبره راح نعطيك خطه واضحه ومتكامله تمكنك تبدأ بالاستثمار بكل استقلاليه وسهوله                                        </p>
+											<a href="contact.html" class="hover-btn-new"><span>تواصل معنا</span></a>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			</div>
+			</div>
+			
+	</div>
+	
+    <div id="overviews" class="section wb dir">
+        <div class="container">
+            <div class="section-title row text-center">
+                <div class="col-md-8 ">
+                    <h3>خدماتنا</h3>
+                </div>
+            </div><!-- end title -->
+        
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h4>الدوره تفيد كل شخص مهتم يكون له مصدر دخل من البيت </h4>
+                        <h2>الدوره الالماسية</h2>
+                        <p>اختصرنا عليك الكثييير من اللف و الدوران و السقوط و النهوض في مجال الاستثمار والتداول بحيث انك راح تاخذ زبدة المجال في هذي الدورة</p>
+
+                        <p>اضغط هنا لمعرفه المزيد من التفاصيل <i class="fa-solid fa-down-long" style="color: #003d99;"></i></p>
+
+                        <a href="about.html" class="hover-btn-new orange"><span>التفاصيل</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="images/10k-to-50k.zip-3.png" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+			</div>
+			<div class="row align-items-center">
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="images/10k-to-50k.zip-2.png" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h4>الدوره تفيد كل شخص مهتم يكون له مصدر دخل من البيت </h4>
+                        <h2>الدوره الذهبية</h2>
+                        <p>اختصرنا عليك الكثييير من اللف و الدوران و السقوط و النهوض في مجال الاستثمار والتداول بحيث انك راح تاخذ زبدة المجال في هذي الدورة</p>
+
+                        <p>اضغط هنا لمعرفه المزيد من التفاصيل <i class="fa-solid fa-down-long" style="color: #003d99;"></i></p>
+
+                        <a href="about.html" class="hover-btn-new orange"><span>التفاصيل</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+	<div class="section cl">
+		<div class="container">
+			<div class="row text-left stat-wrap color">
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<span data-scroll class="global-radius icon_wrap effect-1 alignright"><i class="flaticon-study"></i></span>
+					<p class="stat_count">12000</p>
+					<h3>الطلاب</h3>
+				</div><!-- end col -->
+
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<span data-scroll class="global-radius icon_wrap effect-1 alignright"><i class="flaticon-online"></i></span>
+					<p class="stat_count">240</p>
+					<h3>الكورسات</h3>
+				</div><!-- end col -->
+
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<span data-scroll class="global-radius icon_wrap effect-1 alignright"><i class="flaticon-years"></i></span>
+					<p class="stat_count">55</p>
+					<h3>سنوات الإنجاز</h3>
+				</div><!-- end col -->
+			</div><!-- end row -->
+		</div><!-- end container -->
+	</div><!-- end section -->
+
+    <div id="plan" class="section lb">
+        <div class="container">
+            <div class="section-title text-center column">
+                <h3>ابدأ رحلتك معنا الآن</h3>
+                <p>"لكل شخص مهتم يكون له مصدر دخل من الانترنت"</p>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="message-box">
+                        <ul class="nav nav-pills nav-stacked" id="myTabs">
+                            <li><a class="active" href="#tab2" data-toggle="pill">الاشتراك لأول مره  </a></li>
+                            <li><a href="#tab1" data-toggle="pill"> تجديد الاشتراك الشهري</a></li>
+                        </ul>
+                    </div>
+                </div><!-- end col -->
+            </div>
+
+            <hr class="invis">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tab-content">
+                        <div class="tab-pane active fade show" id="tab1">
+                            <div class="row text-center">
+                                <div class="col-md-3">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2 class="price">السماوية </h2>
+                                            <h1 style="padding-top: 8%;">$55</h1>
+                                            <h3 style="padding-top: 1%;">  مخصصه للمحترفين</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa-solid fa-check"></i><strong>خطط للربح التراكمي </strong>  تم اعدادها من قبل خبرائنا </p>
+                                            <p><i class="fa-solid fa-check"></i><strong>الخطط تعني</strong> أنك مسؤول شخصياً عن حسابك الخاص بالتداول ولك حرية التصرف فيه</p>
+                                            <p><i class="fa-solid fa-check"></i><strong>تبدأ من</strong> خطه الألف دولار وتصل حتى خمسين الف دولار</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new orange"><span>اشترك الأن</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2 class="price">الفضية</h2>
+                                            <h1 style="padding-top: 8%;">$26.4</h1>
+                                            <h3 style="padding-top: 1%;"> مخصصه لذوي الخبره</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa-solid fa-check"></i> توصيات يوميه على <strong>العملات والذهب</strong></p>
+                                            <p><i class="fa-solid fa-check"></i>قناه مخصصه <strong>للاخبار التي تأثر على السوق</strong></p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new orange"><span>اشترك الأن</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2 class="price">الذهبية</h2>
+                                            <h1 style="padding-top: 8%;">$40</h1>
+                                            <h3 style="padding-top: 1%;"> مخصصه للمبتدين</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa-solid fa-check"></i><strong>نعلمك من الصفر حتى الإتقان </strong> في جميع مجالات التداول والاستثمار</p>
+                                            <p><i class="fa-solid fa-check"></i><strong>اشتراك اضافي في</strong> قروبات التوصيات والاخبار</p>
+                                            <p><i class="fa-solid fa-check"></i><strong>متابعه و اشراف من المدربين</strong> خطوه بخطوه</p>
+                                            <p><i class="fa-solid fa-check"></i><strong>بثوث مباشره</strong>  بين كل فترة و فترة للإجابة عن تساؤلات المتدربين</p>
+                                            <p><i class="fa-solid fa-check"></i><strong>قروب دردشه خاص للمشتركين</strong> لطرح جميع مواضيع التداول</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new orange"><span>اشترك الأن</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2 class="price">الألماسية</h2>
+                                            <h1 style="padding-top: 8%;">$53.3</h1>
+                                            <h3 style="padding-top: 1%;">مخصصه للمبتدئ المييز</h3>
+                                            
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa-solid fa-check"></i><strong>نعلمك من الصفر حتى الإتقان </strong> في جميع مجالات التداول والاستثمار</p>
+                                            <p><i class="fa-solid fa-check"></i><strong>اشتراك اضافي في</strong> قروبات التوصيات والاخبار</p>
+                                            <p><i class="fa-solid fa-check"></i><strong>اشتراك اضافي في</strong> احد خطط الربح التراكمي من اختيارك</p>
+                                            <p><i class="fa-solid fa-check"></i><strong>متابعة خاصه و اشراف من المدرب</strong> </p>
+                                            <p><i class="fa-solid fa-check"></i><strong>بث مباشر </strong> بين كل فترة و فترة للإجابة عن تساؤلاتك في حال الحاجه</p>
+                                            <p><i class="fa-solid fa-check"></i><strong>قروب دردشه خاص للمشتركين</strong> لطرح جميع مواضيع التداول</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new orange"><span>اشترك الأن</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end row -->
+                        </div><!-- end pane -->
+
+                        <div class="tab-pane fade" id="tab2">
+                            <div class="row text-center">
+                                <div class="col-md-3">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2 class="price">السماوية </h2>
+                                            <h1 style="padding-top: 8%;">$55</h1>
+                                            <h3 style="padding-top: 1%;">  مخصصه للمحترفين</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa-solid fa-check"></i><strong>خطط للربح التراكمي </strong>  تم اعدادها من قبل خبرائنا </p>
+                                            <p><i class="fa-solid fa-check"></i><strong>الخطط تعني</strong> أنك مسؤول شخصياً عن حسابك الخاص بالتداول ولك حرية التصرف فيه</p>
+                                            <p><i class="fa-solid fa-check"></i><strong>تبدأ من</strong> خطه الألف دولار وتصل حتى خمسين الف دولار</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new orange"><span>اشترك الأن</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2 class="price">الفضية</h2>
+                                            <h1 style="padding-top: 8%;">$40</h1>
+                                            <h3 style="padding-top: 1%;"> مخصصه لذوي الخبره</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa-solid fa-check"></i> توصيات يوميه على <strong>العملات والذهب</strong></p>
+                                            <p><i class="fa-solid fa-check"></i>قناه مخصصه <strong>للاخبار التي تأثر على السوق</strong></p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new orange"><span>اشترك الأن</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2 class="price">الذهبية</h2>
+                                            <h2 class="sale" style="padding-top: 8%;">$133</h2>
+                                            <h1 style="padding-top: 2%;">$80</h1>
+                                            <h3 style="padding-top: 1%;"> مخصصه للمبتدين</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa-solid fa-check"></i><strong>نعلمك من الصفر حتى الإتقان </strong> في جميع مجالات التداول والاستثمار</p>
+                                            <p><i class="fa-solid fa-check"></i><strong>اشتراك اضافي في</strong> قروبات التوصيات والاخبار</p>
+                                            <p><i class="fa-solid fa-check"></i><strong>متابعه و اشراف من المدربين</strong> خطوه بخطوه</p>
+                                            <p><i class="fa-solid fa-check"></i><strong>بثوث مباشره</strong>  بين كل فترة و فترة للإجابة عن تساؤلات المتدربين</p>
+                                            <p><i class="fa-solid fa-check"></i><strong>قروب دردشه خاص للمشتركين</strong> لطرح جميع مواضيع التداول</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new orange"><span>اشترك الأن</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2 class="price">الألماسية</h2>
+                                            <h2 class="sale" style="padding-top: 8%;">$233</h2>
+                                            <h1 style="padding-top: 2%;">$180</h1>
+                                            <h3 style="padding-top: 1%;">مخصصه للمبتدئ المييز</h3>
+                                            
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa-solid fa-check"></i><strong>نعلمك من الصفر حتى الإتقان </strong> في جميع مجالات التداول والاستثمار</p>
+                                            <p><i class="fa-solid fa-check"></i><strong>اشتراك اضافي في</strong> قروبات التوصيات والاخبار</p>
+                                            <p><i class="fa-solid fa-check"></i><strong>اشتراك اضافي في</strong> احد خطط الربح التراكمي من اختيارك</p>
+                                            <p><i class="fa-solid fa-check"></i><strong>متابعة خاصه و اشراف من المدرب</strong> </p>
+                                            <p><i class="fa-solid fa-check"></i><strong>بث مباشر </strong> بين كل فترة و فترة للإجابة عن تساؤلاتك في حال الحاجه</p>
+                                            <p><i class="fa-solid fa-check"></i><strong>قروب دردشه خاص للمشتركين</strong> لطرح جميع مواضيع التداول</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new orange"><span>اشترك الأن</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end row -->
+                        </div><!-- end pane -->
+                    </div><!-- end content -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <footer class="footer">
+        <img src="images/Wasel-blue--removebg-preview .png" alt="" width="300px" height="200px" style="align-items: center;" />
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>من نحن</h3>
+                        </div>
+                        <p>					اهلا بمستثمر المستقبل مع وصل للتعليم عن بُعد
+                            لكل من عنده الرغبه في تنويع مصادر دخله والإستثمار سواء عندك خبره او عدم وجود الخبره راح نعطيك خطه واضحه ومتكامله تمكنك تبدأ بالاستثمار بكل استقلاليه وسهوله
+                            
+                            </p>   
+						<div class="footer-right">
+							<ul class="footer-links-soi">
+								<li><a href="https://www.instagram.com/thewtofficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa-brands fa-instagram"></i></a></li>
+								<li><a href="https://x.com/thewtofficial?s=21&amp%3Bt=6hasq12C80rqErVnEKEjjw"><i class="fa-brands fa-twitter"></i></a></li>
+								<li><a href="https://t.me/thewtofficial7"><i class="fa-brands fa-telegram"></i></a></li>
+							</ul><!-- end links -->
+						</div>	
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+				<div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>الروابط الهامة</h3>
+                        </div>
+                        <ul class="footer-links">
+                            <li><a href="blog.html">خدماتنا</a></li>
+                            <li><a href="pricing.html">الاسعار</a></li>
+							<li><a href="privacy.html">القوانين و الخصوصية </a></li>
+							<li><a href="contact.html">تواصل معنا</a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>معلومات التواصل</h3>
+                        </div>
+
+                        <ul class="footer-links">
+                            <li><a href="mailto:info@thewtofficial.trade">info@thewtofficial.trade</a></li>
+                            <li><a href="https://t.me/WASELTRADING">الدعم :  WASEL TRADING </a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+	<script src="js/timeline.min.js"></script>
+	<script>
+		timeline(document.querySelectorAll('.timeline'), {
+			forceVerticalMode: 700,
+			mode: 'horizontal',
+			verticalStartPosition: 'left',
+			visibleItems: 4
+		});
+	</script>
+</body>
+</html>
